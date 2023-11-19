@@ -2,8 +2,8 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 import openai
 import streamlit as st
-# openai.api_key = "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"
-openai.api_key = "YOUR_API_KEY"
+openai.api_key = "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"
+# openai.api_key = "YOUR_API_KEY"
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 pinecone.init(api_key='59d1646a-e045-4da3-a6ab-5c515b990d29', environment='gcp-starter')

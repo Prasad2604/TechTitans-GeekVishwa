@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 function Prompt() {
   const [messages, setMessages] = useState([]);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     const userInput = document.getElementById('userInput').value.trim();
 
     if (userInput !== '') {
       displayMessage(userInput, 'user');
       document.getElementById('userInput').value = '';
 
-      // Simulate bot response after a short delay (dummy answer)
-      setTimeout(() => {
-        displayMessage('Answer', 'bot');
-      }, 500);
+      try {
+        const response = await axios.post('http://localhost:5000/api/chat', {
+          query: userInput
+        });
+
+        const botResponse = response.data.response;
+
+        // Simulate bot response after a short delay (dummy answer)
+        setTimeout(() => {
+          displayMessage(botResponse, 'bot');
+        }, 500);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle error if needed
+      }
     }
   };
 
