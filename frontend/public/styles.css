@@ -293,79 +293,110 @@ h1{
 
 /*prompt box css*/
 /* Resetting default margin and padding */
+/* Resetting default margin and padding */
+/* Resetting default margin and padding */
 body, h1, h2, p, input, button {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-  }
-  
-  .chat-container {
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .chat-box {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  .chat {
-    height: 200px;
-    overflow-y: auto;
-    margin-bottom: 10px;
-    padding-right: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .input-container {
-    display: flex;
-  }
-  
-  .input-box {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    outline: none;
-  }
-  
-  .send-btn {
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .send-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .message {
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    border-radius: 8px;
-    max-width: 70%;
-  }
-  
-  .user {
-    align-self: flex-end;
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .bot {
-    align-self: flex-start;
-    background-color: #ddd;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/* Add a semi-transparent overlay on the background */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(240, 240, 240, 0.9); /* Adjust the color and opacity as needed */
+  z-index: 1;
+}
+
+.chat-container {
+  max-width: 600px; /* Set a maximum width if needed */
+  width: 100%;
+  position: relative; /* Add position relative */
+  z-index: 2; /* Ensure the chat box is above the overlay */
+}
+
+.chat-box {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%; /* Make the chat box width 100% */
+  margin: 0 auto; /* Center the chat box horizontally */
+}
+
+.chat-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.chat {
+  overflow-y: auto;
+  max-height: 500px;
+  margin-bottom: 10px;
+  padding-right: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-box {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+.send-btn {
+  padding: 8px 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: black;
+}
+
+.message {
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  max-width: 70%;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: black;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: #ddd;
+  color: #000;
+  margin-right: auto;
+}
+

@@ -6,17 +6,15 @@ function Navbar() {
   return (
     <div>
   	    <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
-  	    <label for="menu-icon"></label>
+  	    <label htmlFor="menu-icon"></label>
   	    <nav class="nav"> 		
             <ul class="pt-5">
-                <li><a href="">Work</a></li>
-                <li><a href="">Studio</a></li>
-                <li><a href="">News</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a>class 8</a></li>
+                <li><a>class 9</a></li>
+                <li><a>Class 10</a></li>
             </ul>
   	    </nav>
-
-  	    <Prompt />
+        <Prompt />
     </div>
   );
 }

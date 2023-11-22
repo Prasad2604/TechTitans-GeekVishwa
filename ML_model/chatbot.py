@@ -12,7 +12,7 @@ from utils import *
 class ChatBot:
     def __init__(self):
         # self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
-        self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+        self.llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
         self.buffer_memory = ConversationBufferWindowMemory(k=3, return_messages=True)
         self.conversation_history = []  # New line to store conversation history
 

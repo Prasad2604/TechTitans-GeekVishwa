@@ -2,7 +2,7 @@ from sentence_transformers import SentenceTransformer
 import pinecone
 import openai
 import streamlit as st
-openai.api_key = "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"
+openai.api_key = "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"
 # openai.api_key = "YOUR_API_KEY"
 model = SentenceTransformer('all-MiniLM-L6-v2')
 

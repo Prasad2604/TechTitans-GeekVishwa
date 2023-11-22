@@ -21,14 +21,14 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-# llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="YOUR_API_KEY")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+# llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="YOUR_API_KEY")
 
 if 'buffer_memory' not in st.session_state:
             st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
 
 
-system_msg_template = SystemMessagePromptTemplate.from_template(template="""Answer the question as truthfully as possible and explain answer in detail also give chemical reactions(wherever required) with your explaination and answer every answer in points using the provided context, also you have to give answer in the same language in which question was asked to you, if you don't know the answer to the particular section or if the questions or query is out of the context just say I am an AI school assistant and I am trained over a dataset which helps the school student and this question does not seems relevant.""")
+system_msg_template = SystemMessagePromptTemplate.from_template(template="""Answer the question as truthfully as possible and explain answer in detail also give chemical reactions(wherever required) with your explaination and answer every answer in points where each point is on different line using the provided context, also you have to give answer in the same language in which question was asked to you, if you don't know the answer to the particular section or if the questions or query is out of the context just say I am an AI school assistant and I am trained over a dataset which helps the school student and this question does not seems relevant.""")
 
 
 human_msg_template = HumanMessagePromptTemplate.from_template(template="{input}")
